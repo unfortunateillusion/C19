@@ -10,6 +10,8 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static String choice;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,10 +19,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Random_Output(View view) {
-        Intent intent = new Intent(this, RamdomActivit.class);
+        Intent intent = new Intent(getApplication(), RamdomActivit.class);
 
         Random rand = new Random();
         int num = rand.nextInt(10);
+
+        intent.putExtra(choice, num);
 
         //行く
         startActivity(intent);
