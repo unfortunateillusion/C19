@@ -17,11 +17,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Random_Output(View view) {
-        Intent intent = new Intent(this, Ramdom.class);
+        Intent intent = new Intent(this, RamdomActivit.class);
 
         Random rand = new Random();
         int num = rand.nextInt(10);
-
 
         //行く
         startActivity(intent);
