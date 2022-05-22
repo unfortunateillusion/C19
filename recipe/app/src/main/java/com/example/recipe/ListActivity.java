@@ -30,12 +30,11 @@ public class ListActivity extends AppCompatActivity
 
         // 仮
         HashMap<String, String> ings = new HashMap<>();
-        ings.put("ごはん", "茶碗一杯");
-        ings.put("卵", "1個");
-        ings.put("しょうゆ", "大匙1");
-        dbHandler.addNewRecipe("卵かけごはん", ings, "ごはんをよそう。卵をかける。醤油をかける。");
+        ings.put("ステーキ肉", "300g");
+        ings.put("塩コショウ", "少々");
+        dbHandler.addNewRecipe("ステーキ", ings, "肉を焼く。塩コショウをかける");
 
-        for(int i = 1; i < 2; i++)
+        for(int i = 1; i < dbHandler.getCount(); i++)
         {
             RecipeModel r = dbHandler.getRecipe(i);
 
