@@ -28,7 +28,7 @@ public class RamdomActivity extends AppCompatActivity {
         //Log.d("recipe_name", r.getRecipeName());
         //Log.d("ingredients", r.getIngredients().toString());
         //Log.d("description", r.getDescription());
-        //Log.d("count", String.valueOf(dbHandler.getCount()));
+        Log.d("count", String.valueOf(dbHandler.getCount()));
         textView_1.setText(r.getRecipeName());
         textView_2.setText(r.getIngredients().toString());
         textView_3.setText(r.getDescription());

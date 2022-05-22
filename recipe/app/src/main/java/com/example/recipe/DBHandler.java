@@ -58,6 +58,7 @@ public class DBHandler extends SQLiteOpenHelper {
     public int getCount() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT COUNT(recipe_name) FROM recipes", null);
+        cursor.moveToFirst();
         int count = cursor.getInt(0);
         cursor.close();
         return count;
