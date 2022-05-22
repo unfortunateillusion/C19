@@ -1,4 +1,4 @@
-package com.example.recipe;
+package com.example.test;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         Random rand = new Random();
         int num = rand.nextInt(10);
-        intent.putExtra("choice", num + 1);
+        intent.putExtra("choice", num);
 
         intent.putExtra("Where_from", "main");
 
