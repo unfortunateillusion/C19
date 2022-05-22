@@ -25,5 +25,6 @@ public class HakamoriActivity extends AppCompatActivity {
         Log.d("recipe_name", r.getRecipeName());
         Log.d("ingredients", r.getIngredients().toString());
         Log.d("description", r.getDescription());
+        Log.d("count", String.valueOf(dbHandler.getCount()));
     }
 }
