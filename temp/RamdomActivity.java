@@ -13,12 +13,12 @@ public class RamdomActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ramdom);
-        TextView textView_1 = (TextView) findViewById(R.id.textView_1);
-        TextView textView_2 = (TextView) findViewById(R.id.textView_2);
-        TextView textView_3 = (TextView) findViewById(R.id.textView_3);
+        TextView textView_1 = findViewById(R.id.textView_1);
+        TextView textView_2 = findViewById(R.id.textView_2);
+        TextView textView_3 = findViewById(R.id.textView_3);
 
         Intent intent = getIntent();
-        int choice_num = intent.getIntExtra(MainActivity.choice, 0);
+        int choice_num = intent.getIntExtra("choice", 11);
 
         textView_1.setText(String.valueOf(choice_num));
         textView_2.setText(String.valueOf(choice_num));
@@ -26,7 +26,19 @@ public class RamdomActivity extends AppCompatActivity {
     }
 
     public void return_main(View view) {
-        Intent intent = new Intent(getApplication(), MainActivity.class);
+        Intent intent;
+        Intent get_data = getIntent();
+
+        String Return_to = get_data.getStringExtra("Where_from");
+
+        if (Return_to.equals("List"))
+        {
+            intent = new Intent(getApplication(), ListActivity.class);
+        }
+        else
+        {
+            intent = new Intent(getApplication(), MainActivity.class);
+        }
 
         //行く
         startActivity(intent);

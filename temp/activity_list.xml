@@ -20,6 +20,8 @@
         app:layout_constraintVertical_bias="0.9" />
 
     <ListView
+        android:id="@+id/listView"
+        android:entries="@array/name"
         android:layout_width="410dp"
         android:layout_height="450dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
