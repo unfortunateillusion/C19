@@ -7,29 +7,26 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button_ramdom"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="Random_Output"
-        android:text="@string/string_Random"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.80" />
+        android:text="hakamori"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="231dp" />
 
     <Button
-        android:id="@+id/button_list"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="list_Output"
-        android:text="@string/string_list"
-        app:layout_constraintBottom_toTopOf="@+id/button_ramdom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        android:text="kusou"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="325dp" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kishioka"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="430dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

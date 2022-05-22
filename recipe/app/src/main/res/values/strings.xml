@@ -1,10 +1,3 @@
 <resources>
     <string name="app_name">recipe</string>
-    <string name="btn1">登録</string>
-    <string name="string_Random">ランダム</string>
-    <string name="string_Back">戻る</string>
-    <string name="string_list">一覧</string>
-    <string name="textview_1">レシピ名</string>
-    <string name="textview_2">説明</string>
-    <string name="textview_3">材料</string>
 </resources>
