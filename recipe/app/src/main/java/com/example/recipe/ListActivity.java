@@ -1,4 +1,4 @@
-package com.example.resipe;
+package com.example.recipe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ListActivity extends AppCompatActivity
 {
@@ -25,8 +26,21 @@ public class ListActivity extends AppCompatActivity
         // ListViewに表示する項目をで準備する
         ArrayList data = new ArrayList<>();
 
-        data.add("test");
-        data.add("test2");
+        DBHandler dbHandler = new DBHandler(ListActivity.this);
+
+        // 仮
+        HashMap<String, String> ings = new HashMap<>();
+        ings.put("ごはん", "茶碗一杯");
+        ings.put("卵", "1個");
+        ings.put("しょうゆ", "大匙1");
+        dbHandler.addNewRecipe("卵かけごはん", ings, "ごはんをよそう。卵をかける。醤油をかける。");
+
+        for(int i = 1; i < 2; i++)
+        {
+            RecipeModel r = dbHandler.getRecipe(i);
+
+            data.add(r.getRecipeName());
+        }
 
         // リスト項目とListViewを対応付けるArrayAdapterを用意する
         ArrayAdapter adapter = new ArrayAdapter<>
@@ -39,15 +53,11 @@ public class ListActivity extends AppCompatActivity
         listView_1.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String msg = position + "番目のアイテムがクリックされました";
-                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(getApplication(), RamdomActivity.class);
 
                 intent.putExtra("Where_from", "List");
-
-
-                intent.putExtra("choice", position);
+                intent.putExtra("choice", position + 1);
 
                 //行く
                 startActivity(intent);

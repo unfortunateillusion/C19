@@ -19,13 +19,19 @@ public class RamdomActivity extends AppCompatActivity {
         TextView textView_3 = findViewById(R.id.textView_3);
 
         Intent intent = getIntent();
-        int choice_num = intent.getIntExtra("choice", 11);
+        int choice_num = intent.getIntExtra("choice", -1);
 
-        textView_1.setText(String.valueOf(choice_num));
-        textView_2.setText(String.valueOf(choice_num));
-        textView_3.setText(String.valueOf(choice_num));
+        DBHandler dbHandler = new DBHandler(RamdomActivity.this);
 
-
+        Log.d("log", String.valueOf(choice_num));
+        RecipeModel r = dbHandler.getRecipe(choice_num);
+        //Log.d("recipe_name", r.getRecipeName());
+        //Log.d("ingredients", r.getIngredients().toString());
+        //Log.d("description", r.getDescription());
+        //Log.d("count", String.valueOf(dbHandler.getCount()));
+        textView_1.setText(r.getRecipeName());
+        textView_2.setText(r.getIngredients().toString());
+        textView_3.setText(r.getDescription());
     }
 
     public void return_main(View view) {
@@ -42,19 +48,6 @@ public class RamdomActivity extends AppCompatActivity {
         {
             intent = new Intent(getApplication(), MainActivity.class);
         }
-
-        HashMap<String, String> ings = new HashMap<>();
-        ings.put("ごはん", "茶碗一杯");
-        ings.put("卵", "1個");
-        ings.put("しょうゆ", "大匙1");
-        DBHandler dbHandler = new DBHandler(RamdomActivity.this);
-        dbHandler.addNewRecipe("卵かけごはん", ings, "ごはんをよそう。卵をかける。醤油をかける。");
-
-        RecipeModel r = dbHandler.getRecipe(1);
-        Log.d("recipe_name", r.getRecipeName());
-        Log.d("ingredients", r.getIngredients().toString());
-        Log.d("description", r.getDescription());
-        Log.d("count", String.valueOf(dbHandler.getCount()));
 
         //行く
         startActivity(intent);
