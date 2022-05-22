@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">recipe</string>
+    <string name="btn1">レシピを登録</string>
+    <string name="recipe_name">料理名</string>
+    <string name="ingredients">材料</string>
+    <string name="description">つくり方</string>
+    <string name="btn2">登録</string>
+    <string name="btn3">戻る</string>
+    <string name="save">保存</string>
+    <string name="clear">取り消し</string>
+    <string name="amount">分量</string>
+    <string name="register">レシピを登録</string>
 </resources>
