@@ -1,10 +1,13 @@
 package com.example.recipe;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import java.util.Random;
+
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,24 +16,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    public void Random_Output(View view) {
-        Intent intent = new Intent(getApplication(), RamdomActivity.class);
-
-        Random rand = new Random();
-        int num = rand.nextInt(10);
-        intent.putExtra("choice", num + 1);
-
-        intent.putExtra("Where_from", "main");
-
         //行く
+    public void callHakamori(View view) {
+        Intent intent = new Intent(this, HakamoriActivity.class);
         startActivity(intent);
     }
 
-    public void list_Output(View view) {
-        Intent intent = new Intent(getApplication(), ListActivity.class);
+    public void callKuso(View view) {
+        Intent intent = new Intent(this, KusoActivity.class);
+        startActivity(intent);
+    }
 
-        //行く
+    public void callKishioka(View view) {
+        Intent intent = new Intent(this, KishiokaActivity.class);
         startActivity(intent);
     }
 }

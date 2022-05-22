@@ -14,10 +14,22 @@
         android:theme="@style/Theme.Recipe"
         tools:targetApi="31">
         <activity
+            android:name=".KusoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListActivity"
             android:exported="false" />
         <activity
             android:name=".RamdomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KishiokaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HakamoriActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

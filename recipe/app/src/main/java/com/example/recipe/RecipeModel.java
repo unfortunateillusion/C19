@@ -1,6 +1,6 @@
 package com.example.recipe;
 
-        import java.util.HashMap;
+import java.util.HashMap;
 
 public class RecipeModel {
     private int id;
