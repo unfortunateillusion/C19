@@ -17,9 +17,10 @@ public class MainActivity extends AppCompatActivity {
     public void Random_Output(View view) {
         Intent intent = new Intent(getApplication(), RamdomActivity.class);
 
+        DBHandler dbHandler = new DBHandler(MainActivity.this);
         Random rand = new Random();
-        int num = rand.nextInt(10);
-        intent.putExtra("choice", num + 1);
+        int num = rand.nextInt(dbHandler.getCount());
+        intent.putExtra("choice", num);
 
         intent.putExtra("Where_from", "main");
 
