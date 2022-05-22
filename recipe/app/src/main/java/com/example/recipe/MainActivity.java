@@ -16,8 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-<<<<<<< HEAD
->>>>>> 252b32b86ebcab0bcc527d8cf4ad1a4adda67eb8
+
         //行く
     public void callHakamori(View view) {
         Intent intent = new Intent(this, HakamoriActivity.class);

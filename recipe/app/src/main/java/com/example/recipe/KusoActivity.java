@@ -20,7 +20,7 @@ public class KusoActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplication(), RamdomActivity.class);
 
         Random rand = new Random();
-        int num = rand.nextInt(10);
+        int num = rand.nextInt(dbHandler.getCount());
         intent.putExtra("choice", num + 1);
 
         intent.putExtra("Where_from", "main");

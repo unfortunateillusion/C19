@@ -34,7 +34,7 @@ public class ListActivity extends AppCompatActivity
         ings.put("塩コショウ", "少々");
         dbHandler.addNewRecipe("ステーキ", ings, "肉を焼く。塩コショウをかける");
 
-        for(int i = 1; i < dbHandler.getCount(); i++)
+        for(int i = 1; i <= dbHandler.getCount(); i++)
         {
             RecipeModel r = dbHandler.getRecipe(i);
 
