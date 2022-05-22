@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/si910/AndroidStudioProjects/C19/recipe/app/src/main/res/layout/activity_hakamori.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/si910/AndroidStudioProjects/C19/recipe/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/si910/AndroidStudioProjects/recipe/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
@@ -12,5 +14,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.358695652173913" />
+      </ProjectState>
+    </option>
   </component>
 </project>
