@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         DBHandler dbHandler = new DBHandler(MainActivity.this);
         Random rand = new Random();
         int num = rand.nextInt(dbHandler.getCount());
-        intent.putExtra("choice", num);
+        intent.putExtra("choice", num + 1);
 
         intent.putExtra("Where_from", "main");
 
